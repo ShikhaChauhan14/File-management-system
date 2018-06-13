@@ -10,13 +10,16 @@ void rootDir::free_sectors(int num)
 {
   int j = 0;
   freeSectors.clear();
-  for(int i = 0; i < (total_sector-res_sector-2); i++) { 
-    if(check_status(res_sector + 2 + i) == 0) { 
-      freeSectors.push_back(res_sector + 2 + i);
+  if(freeSectorNo == total_sector)
+    return;
+  for(int i = freeSectorNo; i < total_sector; i++) { 
+    if(check_status(i) == 0) { 
+      freeSectors.push_back(i);
       j++;
     }
     if(j == num) {
       freeSectors[num] = 1;
+      freeSectorNo = i + 1;
       return;
     }
   }

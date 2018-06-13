@@ -249,6 +249,7 @@ bool rootDir::permanent_delete(char filename[19], int current_directory)
           do
           { 
             update_status(temp, 0);
+            freeSectorNo = min(temp, freeSectorNo);
             temp = temp2;
             temp2 = check_status(temp);
           }while(temp != 1);
@@ -260,6 +261,7 @@ bool rootDir::permanent_delete(char filename[19], int current_directory)
           do
           { 
             update_status(temp, 0);
+            freeSectorNo = min(temp, freeSectorNo);
             temp = temp2;
             temp2 = (-1)*check_status(temp);
           }while(temp != 1);  

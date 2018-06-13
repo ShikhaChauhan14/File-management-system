@@ -145,6 +145,7 @@ void rootDir::prm_directory(char dirName[19], int current)
   int next = check_status(current);
   //mark status of directory sector free
   update_status(current, 0);
+  freeSectorNo = min(current, freeSectorNo);
   //Not end of the directory
   if(next != 1) { 
     prm_directory(dirName, next);

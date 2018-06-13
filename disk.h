@@ -15,6 +15,7 @@ class rootDir
   int res_sector;                         //no of sectors that are reserved to store status of sectors.
   int total_sector;                       //Total number of sectors
   const int buffersize = 512;               //size of one sector
+  int freeSectorNo;
   
   vector<int> freeSectors;        //array to store sector number of free sectors
   int current_directory;          // current directory where a entry is to be created

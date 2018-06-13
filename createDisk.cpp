@@ -44,7 +44,7 @@ rootDir::rootDir()
     total_sector = (disk_size*pow(2,20))/pow(2,9);
     res_sector = total_sector/pow(2,7);
   }
-      //directoryName.push(res_sector);
+      freeSectorNo = res_sector + 2;
       directorySector.push(res_sector);               // push root directory starting sector
       directoryName.push("~");
       cout << "Total number of sectors in " << disk_size << " MB disk: " << total_sector << endl;
