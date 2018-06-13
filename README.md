@@ -3,7 +3,7 @@ Create a hierarchical virtual disk that supports file and directory operations w
 
 **Run**  
 ```
-cd file-system
+cd File-management-system
 make
 ./disk
 ```
