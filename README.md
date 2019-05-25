@@ -14,7 +14,7 @@ Let disk size be 1GB = 2^30 bytes.
 Default sector size = 512 = 2^9 bytes.  
 Total number of sectors = 2^30 / 2^9 = 2^21 sectors.  
 To represent 2^21 different sectors, we need atleast 21 bits. Therefore, we used 1 int i.e. 4 bytes to store sector status.  
-Reserved sectors = 2^11 / 2^7 = 2^4 (one reserverd sector can store status of 2^7 sectors.)
+Reserved sectors = 2^21 / 2^7 = 2^14 (one reserverd sector can store status of 2^7 sectors.)
 
 Directory size is 1024 bytes(2 sectors)  
 Each entry in the directory is of 32 bytes(one directory can have atmax 32 entries)
